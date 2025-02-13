@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Book.Models
+namespace BooksMinimalApi.Models
 {
     public class Book
     {
