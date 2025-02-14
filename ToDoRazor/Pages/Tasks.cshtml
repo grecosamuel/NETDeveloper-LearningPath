@@ -1,0 +1,58 @@
+@page
+@model TasksListModel
+@{
+    ViewData["Title"] = "Tasks List";
+}
+
+<div class="text-center">
+    <h1 class="display-4">List of Tasks</h1>
+
+    @if (Model.listTasks.Count > 0)
+    {
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Completed</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model.listTasks)
+                {
+                    <tr>
+                        <td>@task.TaskName</td>
+                        <td>@(task.Completed ? "Yes" : "No")</td>
+                        <td>
+                            <form method="post" asp-page-handler="Delete" asp-route-id="@task.Id">
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Tasks</p>
+    }
+
+</div>
+
+<h3>Add new task</h3>
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="newTask.TaskName" class="control-label"></label>
+        <input asp-for="newTask.TaskName" class="form-control" />
+        <span asp-validation-for="newTask.TaskName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
