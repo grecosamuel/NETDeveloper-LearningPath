@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+
+using ToDoRazor.Data;
+using ToDoRazor.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<TaskContext>(options => options.UseSqlite("Data Source=Tasks.db"));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<TaskService>();
 
 var app = builder.Build();
 
