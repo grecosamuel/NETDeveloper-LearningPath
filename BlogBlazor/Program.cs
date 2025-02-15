@@ -1,4 +1,6 @@
 using BlogBlazor.Components;
+using BlogBlazor.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+builder.Services.AddControllers();
+builder.Services.AddHttpClient();
+builder.Services.AddDbContext<BlogBlazorDbContext>(options =>
+    options.UseSqlite("Data Source=blog.db"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,6 +26,8 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
+
+app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
