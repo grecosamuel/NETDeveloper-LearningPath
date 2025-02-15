@@ -1,3 +1,4 @@
 bin/Debug/
 obj/Debug/
 Migrations/
+blog.db*
