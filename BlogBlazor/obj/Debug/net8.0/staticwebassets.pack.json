@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/samuel/Desktop/myprojects/NETDeveloper-LearningPath/BlogBlazor/obj/Debug/net8.0/scopedcss/projectbundle/BlogBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets/BlogBlazor.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/samuel/Desktop/myprojects/NETDeveloper-LearningPath/BlogBlazor/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/samuel/Desktop/myprojects/NETDeveloper-LearningPath/BlogBlazor/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/samuel/Desktop/myprojects/NETDeveloper-LearningPath/BlogBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/samuel/Desktop/myprojects/NETDeveloper-LearningPath/BlogBlazor/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlogBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BlogBlazor.props",
+      "PackagePath": "build\\BlogBlazor.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlogBlazor.props",
+      "PackagePath": "buildMultiTargeting\\BlogBlazor.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlogBlazor.props",
+      "PackagePath": "buildTransitive\\BlogBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
